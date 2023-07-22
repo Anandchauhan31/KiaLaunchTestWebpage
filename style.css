@@ -1,0 +1,777 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variables */
+:root {
+    --primary-color: #06121b;
+}
+
+/* Website structure  */
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    background-color: var(--primary-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header area  */
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2rem 0px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.nav-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* CSS styles for the logo */
+.logo {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 42px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* CSS styles for the navigation links */
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+.nav ul li a {
+    position: relative;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    border-bottom: 2px solid #ea0029;
+    padding-bottom: 30px;
+}
+
+ul.left-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul.left-nav li a {
+    font-size: 0.8rem;
+}
+
+ul.right-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button.sidebarBtn {
+    display: none;
+}
+
+/* Hero banner */
+.banner {
+    position: relative;
+    background: linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%)), url(images/kia-001.webp) center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.banner-text {
+    color: #fff;
+    text-align: left;
+}
+
+.banner-text h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1em;
+}
+
+.scroll-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 14px;
+}
+
+.scroll-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+/* Animation css  */
+
+.fade_up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.right {
+    opacity: 0;
+    transform: translatex(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.left {
+    opacity: 0;
+    transform: translatex(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+/* intro section css */
+
+section.intro-text {
+    padding: 5.5rem 0 7rem 0;
+}
+
+.gradient-heading {
+    background: linear-gradient(45deg, #EA0029 46%, #F3C300 56%, #5e7d2d 68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 8.5rem;
+    text-align: center;
+    font-weight: 200;
+}
+
+.body-text {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 200;
+}
+
+/* services-wrapper */
+.video-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-col {
+    flex: 2;
+    background-image: url('images/kia-002.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    height: 440px;
+}
+
+.single-text-col {
+    flex: 1;
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 100;
+    padding-left: 5rem;
+    margin: 7rem 0;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #EA0029 44%, #F3C300 70%, #5e7d2d 86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.videos-text .container .video-text-container:nth-child(2) {
+    margin-top: 4rem;
+}
+
+.videos-text .container .video-text-container:nth-child(2) .video-col {
+    background-image: url('images/kia-003.webp');
+}
+
+.videos-text .container .video-text-container:nth-child(2) .video-text-col {
+    padding-right: 5rem;
+}
+
+/* Second videos and text section  */
+
+.second-videos-and-text .container .video-text-container:nth-child(1) .video-col {
+    background-image: url('images/kia-005.webp');
+}
+
+.second-videos-and-text .container .video-text-container:nth-child(2) .video-col {
+    background-image: url('images/kia-006.webp');
+}
+
+.second-videos-and-text .container .video-text-container:nth-child(2) {
+    margin-top: 4rem;
+}
+
+.second-videos-and-text .container .video-text-container:nth-child(2) .video-text-col {
+    padding-right: 5rem;
+}
+
+/* mid video section  */
+
+.mid-video-wrapper {
+    margin-top: 7rem;
+}
+
+.mid-video {
+    background-image: url('images/kia-004.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    height: 480px;
+    width: 100%;
+}
+
+span.gradient-heading {
+    line-height: 0.6em;
+}
+
+.second-mid-video {
+    background-image: url('images/kia-007.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    height: 480px;
+    width: 100%;
+}
+
+.video-text-col {
+    flex: 1;
+    font-size: 2.6rem;
+    color: #fff;
+    font-weight: 100;
+    padding-left: 5rem;
+}
+
+.mid-text {
+    margin-top: 1.5rem;
+    margin-bottom: 7rem;
+}
+
+/* Tabs  */
+
+.tab-section {
+    padding: 5rem 0;
+}
+
+.tab-title {
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.ui-widget-header {
+    background: transparent !important;
+    border: 0px !important;
+}
+
+.ui-widget-content {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+.ui-widget-content p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid var(--primary-color) !important;
+    display: grid;
+    place-items: center;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default a {
+    background-color: #ffffff1e !important;
+    border: none !important;
+    border-radius: 3px !important;
+    color: #fff !important;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default a:hover {
+    color: var(--primary-color) !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: none !important;
+    background: #fff !important;
+    font-weight: normal;
+}
+
+.ui-state-default:hover {
+    background-color: #ffffff !important;
+    transition: ease-in .3s;
+}
+
+.ui-state-active a {
+    border: none !important;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    width: 8.5rem;
+    height: 2.2rem;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+    cursor: text;
+    color: var(--primary-color) !important;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 1.5rem 0 !important;
+}
+
+button.tab_btn {
+    width: 5.5rem;
+    height: 2rem;
+    font-family: 'Outfit', sans-serif !important;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button.tab_btn:hover {
+    background-color: #ffffff98;
+    transition: ease-in .3s;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* products section  */
+
+.products-container {
+    background-color: #fff;
+    padding: 5rem 0;
+}
+
+.dark-small-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-images {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-images img {
+    width: 100%;
+    height: auto;
+}
+
+.car-name {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+/* Media query for Tab  */
+
+@media only screen and (max-width: 1148px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        height: 5rem;
+    }
+
+    .logo {
+        left: 5rem;
+        top: 50%;
+    }
+
+    .nav-wrapper {
+        background-color: var(--primary-color);
+        flex-direction: column-reverse;
+        width: 50%;
+        padding: 3rem;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: flex-end;
+        align-items: flex-start;
+        display: flex;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    ul.left-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul.right-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav li {
+        margin: 1.5rem 0px;
+    }
+
+    .nav ul li a:hover,
+    .nav ul li a.active {
+        padding-bottom: 1rem;
+    }
+
+    .sidebarBtn.toggle span {
+        background: transparent;
+    }
+
+    .sidebarBtn.toggle span:before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .sidebarBtn.toggle span:after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .sidebarBtn:hover span,
+    .sidebarBtn:hover span:before,
+    .sidebarBtn:hover span:after {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .sidebarBtn.toggle:hover span {
+        background: transparent;
+    }
+
+    button.sidebarBtn {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        display: flex;
+        z-index: 99;
+        right: 2.5rem;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    .sidebarBtn span {
+        display: block;
+        width: 35px;
+        height: 3px;
+        background: #ffffff;
+        position: absolute;
+        top: 50%;
+        transition: .3s;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sidebarBtn span:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        transition: .3s;
+    }
+
+    .sidebarBtn span:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #ffffff;
+        transition: .3s;
+    }
+
+    .banner {
+        height: 60vh;
+        padding: 0px;
+    }
+
+    .banner-text h1 {
+        font-size: 3rem;
+    }
+
+    .gradient-heading {
+        font-size: 6.5rem;
+    }
+
+    .intro-text {
+        padding: 1.5rem 0 3.5rem 0;
+    }
+
+    .video-col {
+        height: 350px;
+    }
+
+    .video-text-col {
+        font-size: 1.8rem;
+        padding-left: 2rem;
+    }
+
+    .videos-text .container .video-text-container:nth-child(2) .video-text-col {
+        padding-right: 2rem;
+    }
+
+    .single-text-col {
+        padding-left: 2rem;
+        margin: 3rem 0;
+    }
+
+    .body-text {
+        font-size: 1.6rem;
+    }
+
+    .mid-video-wrapper {
+        margin-top: 4rem;
+    }
+
+    .mid-text {
+        margin-bottom: 3.5rem;
+    }
+
+    .second-videos-and-text .container .video-text-container:nth-child(2) .video-text-col {
+        padding-right: 3rem;
+    }
+
+    .tab-section {
+        padding: 3rem 0;
+    }
+
+    .tab-title {
+        font-size: 3rem;
+    }
+
+    .ui-tabs .ui-tabs-nav {
+        /* margin: 0; */
+        /* padding: 0.2em 0.2em 0; */
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+        width: 6.8rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .ui-widget-content p {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .products-container {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .logo {
+        left: 4.2rem;
+    }
+
+    button.sidebarBtn {
+        right: 1.5rem;
+        top: 2.5rem;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+    }
+
+    section.intro-text {
+        padding: 1rem 0 2rem 0;
+    }
+
+    .gradient-heading {
+        font-size: 4rem;
+    }
+
+    .body-text {
+        font-size: 1.3rem;
+    }
+
+    .video-text-container {
+        flex-wrap: wrap;
+    }
+
+    .video-col {
+        width: 100%;
+        flex: none;
+        height: 220px;
+    }
+
+    .video-text-col {
+        margin-top: 1.3rem;
+    }
+
+    .videos-text .container .video-text-container:nth-child(2) {
+        margin-top: 1.5rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .videos-text .container .video-text-container:nth-child(2) .video-text-col {
+        padding-right: 1rem;
+    }
+
+    .mid-video {
+        height: 240px;
+    }
+
+    .mid-video-wrapper {
+        margin-top: 1.4rem;
+    }
+
+    .mid-text {
+        margin-bottom: 1.4rem;
+    }
+
+    .gradient-heading {
+        font-size: 3rem;
+    }
+
+    .second-videos-and-text .container .video-text-container:nth-child(2) {
+        margin-top: 1.5rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .single-text-col {
+        padding-left: 2rem;
+        margin: 1.3rem 0;
+        font-size: 2rem;
+    }
+
+    .second-mid-video {
+        height: 240px;
+    }
+
+    .tab-section {
+        padding: 1.2rem 0;
+    }
+
+    .tab-title {
+        font-size: 1.8rem;
+    }
+
+    .ui-tabs .ui-tabs-nav {
+        margin: 0.8rem 0 !important;
+    }
+
+    .products-container {
+        padding: 1.3rem 0;
+    }
+
+    .products {
+        flex-direction: column-reverse;
+    }
+
+    .products-images {
+        width: 100%
+    }
+
+    .dark-small-subtitle {
+        font-size: 1.5rem;
+    }
+
+}
